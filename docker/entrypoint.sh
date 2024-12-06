@@ -12,12 +12,12 @@ if [ ! -f "/var/www/html/.init_done" ]; then
     composer install --no-interaction
 
     # Installer les dépendances Node.js via npm
-    echo "Installation des dépendances npm..."
-    npm install
+    # echo "Installation des dépendances npm..."
+    # npm install
     
     # Attendre que la base de données soit prête (utile si votre DB prend du temps à démarrer)
     echo "Attente de la base de données..."
-    while ! /usr/bin/mysqladmin ping -h"lorem_news_symfony-db-1" --silent; do
+    while ! /usr/bin/mysqladmin ping -h"lorem_news_back-db-1" --silent; do
         sleep 1
     done
     

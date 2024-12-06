@@ -15,7 +15,7 @@ services:
       - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    # entrypoint: /usr/local/bin/entrypoint.sh
+    entrypoint: /usr/local/bin/entrypoint.sh
     <<: *network
 
   db:

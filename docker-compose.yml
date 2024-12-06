@@ -23,7 +23,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./docker/imports:/var/lib/mysql-files
+      - ./docker/mysql:/var/lib/mysql-files
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=no
       - MYSQL_DATABASE=lorem_news
